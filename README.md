@@ -16,7 +16,7 @@ preemptible = true  - параметр прерывания VM, VM может б
   <img width="1882" height="429" alt="1" src="https://github.com/user-attachments/assets/c249d9ef-2c27-4f8a-935a-e42c6a353a60" />
 
 
-### Задание 4
+## Задание 4
 
 Вывод значений ip-адресов команды ```terraform output```
 
@@ -25,7 +25,7 @@ preemptible = true  - параметр прерывания VM, VM может б
 
 ## Дополнительное задание
 
-### Задание 7
+## Задание 7
 
 1. Команда вывода **второго** элемента из списка test_list.
 ```tf 
@@ -43,7 +43,7 @@ length(local.test_list)
 "${local.test_map.admin} is ${keys(local.test_map)[0]} for ${local.test_list[2]} server based on OS ${local.servers.stage.image} with ${local.servers.stage.cpu + local.servers.production.cpu} vcpu, ${local.servers.stage.ram + local.servers.production.ram} ram and ${length(local.servers.stage.disks) + length(local.servers.production.disks)} virtual disks"
 ```
 
-### Задание 8
+## Задание 8
 2. Выражение в terraform console, которое позволит вычленить строку "ssh -o 'StrictHostKeyChecking=no' ubuntu@62.84.124.117"
 ```tf
 var.test[0].dev1[0]
