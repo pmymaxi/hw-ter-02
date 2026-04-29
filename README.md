@@ -20,7 +20,7 @@ preemptible = true  - параметр прерывания VM, VM может б
 
 Вывод значений ip-адресов команды ```terraform output```
 
-<img width="422" height="378" alt="4" src="https://github.com/user-attachments/assets/91b59627-c823-4078-b9c8-17a72c27cd5b" />
+<img width="791" height="753" alt="4" src="https://github.com/user-attachments/assets/b5a9b509-b14f-4766-b569-18c980bc41fc" />
 
 
 ## Дополнительное задание
