@@ -1,31 +1,26 @@
 variable "vms_resources" {
   type = map(object({
     name          = string
-    user          = string
+    hostname      = string
+    user          = optional(string)
     family        = string
     platform_id   = string
     zone          = string
     cores         = number
     memory        = number
     core_fraction = number
+    disk_size     = number
+    disk_type     = string
     preemptible   = bool
     subnet_id     = string
     nat           = bool
   }))
 
 }
-
-variable "vms_vpc_subnet" {
-  type = map(object({
-    name           = string
-    zone           = string
-    v4_cidr_blocks = list(string)
-  }))
-}
-
 variable "vms_resources_metadata" {
   type = map(object({
     serial-port-enable = string
+    ssh-user = string
   }))
 }
 
@@ -46,12 +41,6 @@ variable "route_table" {
 
 }
 
-
-/*variable "default_zone_db" {
-  type        = string
-  default     = "ru-central1-b"
-  description = "https://cloud.yandex.ru/docs/overview/concepts/geo-scope"
-}
 variable "default_cidr_db" {
   type        = list(string)
   default     = ["10.0.2.0/24"]
@@ -64,6 +53,7 @@ variable "vpc_name_db" {
   description = "VPC network & subnet name"
 }
 
+/*
 variable "vm_db_family" {
   type        = string
   default     = "ubuntu-2004-lts"
@@ -75,13 +65,11 @@ variable "vm_db_name" {
   default     = "netology-develop-platform-db"
   description = "name VM"
 }
-
-   metadata = {
-     serial-port-enable = 1
-     ssh-keys           = "ubuntu:ssh-ed25519 AAAAC..."
-   }
-
-
+variable "vm_db_hostname" {
+  type        = string
+  default     = "netology-develop-platform-db"
+  description = "hostname VM"
+}
 
 variable "vm_db_platform_id" {
   type        = string
@@ -120,6 +108,12 @@ variable "vm_db_user" {
   type        = string
   default     = "ubuntu"
   description = "user name for vm"
+
+}
+variable "vm_db_serial-port" {
+  type        = number
+  default     = 1
+  description = "serial-port"
 
 }
 */
